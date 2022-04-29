@@ -143,6 +143,34 @@ paths:
                   dateOfBirth: '1996-08-24'
         description: Post the necessary fields for the API to create a new user.
       description: Create a new user.
+  /:
+    get:
+      summary: hello express
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                x-examples:
+                  example-1:
+                    message: Hello express
+                properties:
+                  message:
+                    type: string
+                    minLength: 1
+                  test:
+                    type: string
+                    pattern: '\d{4}-\d{2}-\d{2}'
+                  test2:
+                    type: string
+                required:
+                  - message
+                  - test2
+      operationId: get
 components:
   schemas:
     User:
